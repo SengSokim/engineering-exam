@@ -1,6 +1,6 @@
 import { CheckIcon, BanIcon } from "lucide-react";
 import type { Metadata } from 'next'
- 
+import { Button } from "@/components/ui/button";
 export const metadata: Metadata = {
   title: 'Main',
 }
@@ -71,7 +71,7 @@ export default function main() {
               </div>
             </div>
             <div>
-              <button className="float-right bg-amber-300 p-3 rounded">Complete Registration</button>
+              <Button className="float-right p-3 rounded">Complete Registration</Button>
             </div>
           </div>
         </div>
