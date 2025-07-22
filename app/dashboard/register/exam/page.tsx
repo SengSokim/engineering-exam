@@ -31,7 +31,7 @@ export default function registerExam() {
           </div>
         </div>
       </div>
-      <div className="w-full flex gap-4">
+      <div>
         <CalendarContent />
       </div>
     </div>

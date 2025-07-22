@@ -1,10 +1,9 @@
-"use client";
-import { Calendar } from '@/components/ui/calendar'
-import { useState } from 'react'
-import { Input } from '@/components/ui/input'
-
+import type { Metadata } from 'next'
+import CalendarContent from "./CalendarContent";
+export const metadata: Metadata = {
+  title: 'Register for Training',
+}
 export default function registerTraining() {
-  const [date, setDate] = useState<Date | undefined>(new Date());
   return (
     <div className="flex flex-col lg:flex-row m-4 gap-4">
       <div className="w-full lg:w-lg bg-zinc-100 text-black p-4 rounded">
@@ -32,20 +31,8 @@ export default function registerTraining() {
           </div>
         </div>
       </div>
-      <div className="w-full flex gap-4">
-        <div>
-          <Calendar
-            mode="single"
-            selected={date}
-            onSelect={setDate}
-            className="rounded-md shadow-sm w-lg"
-            captionLayout="dropdown"
-          />
-        </div>
-        <div>
-          <p className="my-3">Please select an available date from the calendar or type in the date below</p>
-          <Input className="bg-zinc-100" placeholder="Date" />
-        </div>
+      <div>
+        <CalendarContent />
       </div>
     </div>
   );
