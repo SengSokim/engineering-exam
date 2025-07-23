@@ -6,18 +6,18 @@ import { Input } from "@/components/ui/input";
 export default function CalendarContent() {
   const [date, setDate] = useState<Date | undefined>(new Date());
   return (
-    <div className="w-full lg:flex gap-4">
+    <div className="w-full flex flex-col lg:flex-row lg:gap-4">
       <div>
         <Calendar
           mode="single"
           selected={date}
           onSelect={setDate}
-          className="rounded-md shadow-sm w-full lg:w-lg"
+          className="rounded-md shadow-sm w-full lg:w-lg h-[400px] lg:h-full"
           captionLayout="dropdown"
         />
       </div>
-      <div>
-        <p className="my-3">
+      <div className="my-3">
+        <p >
           Please select an available date from the calendar or type in the date
           below
         </p>
